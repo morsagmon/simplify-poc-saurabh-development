@@ -1,0 +1,37 @@
+<ion-content style="height: 100%">
+    <ion-grid class="ion-header">
+        <ion-row class="ion-margin-vertical ion-justify-content-center row">
+            <ion-col size="7" class="document-preview">
+                <img class="preview-img" src="assets/images/demo.png">
+                <ion-text class="ion-text-left ion-text-custom">
+                    <h5 class="ion-no-margin LatoMedium name">Jane</h5>
+                    <p class="ion-no-margin LatoRegular degree">9th Grade</p>
+                </ion-text>
+            </ion-col>
+            <ion-col size="5" class="document-preview ion-align-self-start helper">
+                <button ion-button class="helper-btn ion-justify-content-center ion-align-items-center"
+                        routerLink="/helpers">
+                    <img class="user-img" src="assets/images/users.png">
+                    Helpers
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-grid class="container">
+        <ion-row class="ion-margin-vertical ion-justify-content-center row">
+            <ion-col size="12" class="ion-text-center" style="position: static">
+                <img class="main-img ion-margin-bottom" src="assets/images/home-main.png">
+                <button ion-button class='help-btn'
+                        (click)="photoService.addNewToGallery()">Get Help
+                </button>
+                <!--                <div class="on-way-text" *ngIf="isSentInvitation == 'true'">-->
+                <!--                    <ion-text ion-button class='text'>-->
+                <!--                        Help is on the way-->
+                <!--                    </ion-text>-->
+                <!--                    <ion-text class="ion-margin-vertical clear" (click)="clearHelper()">Clear Helper Session</ion-text>-->
+                <!--                </div>-->
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,21 @@
+/* Without setting height the slides will take up the height of the slide's content */
+ion-slides {
+  height: 100%;
+}
+
+.ion-slide-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ion-text {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #022B3A;
+
+  }
+}

@@ -1,0 +1,36 @@
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>-->
+<ion-content>
+    <ion-grid class="ion-header">
+        <ion-row class="ion-margin-vertical ion-justify-content-center row">
+            <ion-col size="12" class="ion-text-center">
+                <div class="back-arrow" (click)="helper.back()">
+                    <img src="assets/images/back-arrow.svg" alt="">
+                </div>
+            </ion-col>
+            <ion-col size="12" class="ion-text-center main-heading">
+                My Helpers
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <!-- List of Text Items -->
+    <ion-list>
+        <ion-item style="--border-color: white !important;" *ngFor="let item of helperList; let i = index">
+            <ion-avatar slot="start">
+                <img src="{{item.image}}">
+            </ion-avatar>
+            <ion-label>
+                <h3 class="ion-text-capitalize">{{item.userName}}</h3>
+                <p class="ion-text-capitalize">{{item.relation}}</p>
+            </ion-label>
+            <ion-avatar slot="end" *ngIf="i === 0">
+                <img src="assets/images/gold-star.png" height="38" width="38">
+            </ion-avatar>
+        </ion-item>
+    </ion-list>
+</ion-content>

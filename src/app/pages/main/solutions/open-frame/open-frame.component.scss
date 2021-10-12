@@ -1,0 +1,98 @@
+/* Without setting height the slides will take up the height of the slide's content */
+ion-slides {
+  height: 100%;
+}
+
+.ion-slide-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ion-text {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #022B3A;
+
+  }
+}
+
+
+.row {
+  width: 100%;
+}
+
+.top-video {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  max-width: 100px;
+  z-index: 2;
+}
+
+.main-video {
+  width: 100%;
+  max-height: 70%;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+.view-solution-btn {
+  background-color: #022B3A !important;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: LatoBold;
+  color: #FFFFFF;
+  width: 100%;
+  border-radius: 100px;
+}
+
+.webPage #drawDiv .bbbPicker {
+  overflow-y: auto !important;
+  height: 75% !important;
+}
+
+:host .webPage #drawDiv .bbbPicker {
+  overflow-y: auto !important;
+  height: 75% !important;
+}
+
+.h-0 {
+  height: 0 !important;
+}
+
+
+.message {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  white-space: pre-wrap;
+}
+
+.other-message {
+  background: var(--ion-color-tertiary);
+  color: white;
+}
+
+.my-message {
+  background: var(--ion-color-secondary);
+  color: white;
+}
+
+.message-input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--ion-color-medium);
+  background-color: white;
+  resize: none;
+  padding: 10px;
+}

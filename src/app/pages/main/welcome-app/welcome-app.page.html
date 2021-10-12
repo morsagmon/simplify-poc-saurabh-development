@@ -1,0 +1,14 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title routerLink="/helper-home">Welcome to Simplify</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label>You are:</ion-label>
+        <ion-select ok-text="Yes" placeholder="Select Name" (ionChange)="changeName($event)">
+            <ion-select-option *ngFor="let user of staticName" [value]="user.toLowerCase()">{{user}}</ion-select-option>
+        </ion-select>
+    </ion-item>
+</ion-content>

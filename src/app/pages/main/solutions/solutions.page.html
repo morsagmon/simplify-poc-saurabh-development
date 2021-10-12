@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Found Solutions</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="container">
+        <ion-row class="ion-margin-vertical ion-justify-content-center row">
+            <ion-col size="12" id="content-text" class="ion-margin-vertical ion-no-padding">
+                <ion-slides pager="false" [options]="slideOpts" #mySlider>
+                    <ion-slide *ngFor="let item of finalSolutions; let i = index">
+                        <iframe class="webPage" id="iframe" style="height: 500px; width: 100%"
+                                allow="camera; microphone"
+                                [src]="item.boardURL | safe: 'resourceUrl'"></iframe>
+                    </ion-slide>
+                </ion-slides>
+            </ion-col>
+
+            <ion-col size="12" class="ion-no-padding ion-slide-buttons">
+                <ion-text (click)="previousSlide()"><img src="assets/images/back-arrow.svg" alt=""> Previous</ion-text>
+                <ion-text (click)="nextSlide()">Next <img style="transform: rotate(180deg);"
+                                                          src="assets/images/back-arrow.svg" alt=""></ion-text>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

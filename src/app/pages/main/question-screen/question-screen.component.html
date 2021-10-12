@@ -1,0 +1,73 @@
+<ion-content>
+    <ion-grid class="ion-header">
+        <ion-row class="ion-margin-vertical ion-justify-content-center row">
+            <ion-col size="12" class="ion-text-center">
+                <div class="back-arrow" routerLink="/home">
+                    <img src="assets/images/back-arrow.svg" alt="">
+                </div>
+            </ion-col>
+            <ion-col size="12" class="ion-text-center main-heading">
+                Help Found
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <!-- List of Text Items -->
+    <ion-grid>
+        <ion-row class="ion-padding main-row">
+            <ion-col size="12" class="main-col">
+                <ion-row class="ion-justify-content-center ion-padding-vertical">
+                    <ion-col size="12" id="content-text">
+                    </ion-col>
+                    <ion-col size="12" *ngIf="!isRendered">
+                        <ion-img [src]="renderedImage"></ion-img>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-padding-bottom main-row ion-justify-content-center" *ngIf="solutionNumber">
+            <ion-col size="12" class="ion-text-center found-text">
+                *Found {{solutionNumber}} solutions
+            </ion-col>
+
+            <ion-col size="12" class="ion-text-center ion-margin-vertical ion-padding-horizontal">
+                <button ion-button class='view-solution-btn' routerLink="/found-solution"
+                        [queryParams]="{number: this.problemNumber}">View
+                    Solutions
+                </button>
+                <!--                <button ion-button class='view-solution-btn'>View Solutions</button>-->
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="ion-padding ion-justify-content-center">
+            <ion-col size="12" class="ion-no-padding">
+                <ion-row class="ion-justify-content-center ion-padding helpers">
+                    <ion-col size="12" class="helpers-heading ion-margin-bottom">
+                        Found {{helperList?.length}} {{helperList?.length == 1 ? 'Helper' : 'Helpers'}}
+                    </ion-col>
+                    <ion-col size="4"
+                             *ngFor="let item of helperList; let i = index"
+                             (click)="item.status == '1' ? selectHelper(item) : ''"
+                             class="each-helper ion-text-center">
+                        <img *ngIf="item.status == '1'" src="assets/images/check.svg" class="check-svg" alt="">
+                        <img *ngIf="item.status == '2'" src="assets/images/5-min.svg" class="check-svg" alt="">
+                        <div [ngStyle]="{'background-color': item.bgColor}">
+                            <img src="{{item.image}}" class="img" alt="">
+                            <ion-text class="ion-text-center">
+                                <h6 class="ion-no-margin LatoMedium name">{{item.userName}}</h6>
+                            </ion-text>
+                        </div>
+                    </ion-col>
+                    <ion-col size="12" *ngIf="helperList?.length > 0"
+                             class="ion-text-center ion-margin-vertical ion-padding-horizontal">
+                        <ion-spinner *ngIf="isInvite && !waitingMessage"></ion-spinner>
+                        <ion-text *ngIf="!isInvite && waitingMessage">{{waitingMessage}}</ion-text>
+                        <button ion-button *ngIf="!isInvite && !waitingMessage" (click)="inviteButton()"
+                                class='view-solution-btn'>Invite
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

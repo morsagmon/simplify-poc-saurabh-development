@@ -1,0 +1,155 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+.ion-header {
+  height: 200px;
+  background: url("/assets/images/home-bg.png") 100% 100% no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .row {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+
+    .helper-btn {
+      width: 100%;
+      height: 45px;
+      padding: 0 10px;
+      font-weight: 500;
+      font-size: 16px;
+      font-family: LatoBold;
+      color: #FFFFFF;
+      background-color: #022B3A;
+      border-radius: 10px;
+      display: flex;
+
+      .user-img {
+        height: 25px;
+        margin-right: 10px;
+        width: 25px;
+        display: inline-block;
+        object-fit: scale-down;
+      }
+    }
+  }
+
+  .document-preview {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .preview-img {
+    height: 100px;
+    margin-right: 10px;
+    width: 100px;
+    padding: 3px;
+    border-radius: 50%;
+    border: 1px solid #96ACF3;
+  }
+}
+
+.name {
+  font-weight: 500;
+  font-size: 16px;
+  color: #2C2D2F;
+}
+
+.degree {
+  font-weight: 400;
+  font-size: 12px;
+  color: #2c2d2f;
+  opacity: 0.6;
+}
+
+.helper {
+  bottom: -5px;
+}
+
+.ion-text-custom {
+  align-self: center !important;
+  margin-bottom: 35px;
+}
+
+.container {
+  height: calc(100% - 260px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .main-img {
+    height: auto;
+    object-fit: scale-down;
+  }
+
+  .help-btn {
+    background-color: #1F7A8C !important;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: LatoBold;
+    color: #FFFFFF;
+    width: 90%;
+    border-radius: 100px;
+    position: absolute;
+    top: 90%;
+    left: 5%;
+  }
+
+  .on-way-text {
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    width: 100%;
+
+    .text {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      font-weight: 500;
+      font-size: 16px;
+      font-family: LatoBold;
+      color: #1F7A8C;
+      border-radius: 100px;
+      border: 1px solid #1F7A8C;
+    }
+
+    .clear {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      font-weight: 500;
+      font-size: 14px;
+      font-family: LatoBold;
+      color: #1F7A8C;
+    }
+  }
+}
+
+.row {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.top-video {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  max-width: 100px;
+  z-index: 2;
+}
+
+.main-video {
+  width: 100%;
+  max-height: 70%;
+}

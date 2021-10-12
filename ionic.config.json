@@ -1,0 +1,7 @@
+{
+  "name": "Skill Blaster",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

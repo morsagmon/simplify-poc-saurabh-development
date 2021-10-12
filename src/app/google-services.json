@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "567686022550",
+    "firebase_url": "https://simplify-poc-default-rtdb.firebaseio.com",
+    "project_id": "simplify-poc",
+    "storage_bucket": "simplify-poc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567686022550:android:ef914573bda0e407fa89b7",
+        "android_client_info": {
+          "package_name": "com.SkillBlaster.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567686022550-94p7mn8rmsqsn1nbml06lg211a1d0mbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAAVl0xyDpVs8rsFKTW6mix-XxtD38JtA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567686022550-94p7mn8rmsqsn1nbml06lg211a1d0mbo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "567686022550-dab9ns3f6r8vm2h314525a8clc5cqium.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.SkillBlaster.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

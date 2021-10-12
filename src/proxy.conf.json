@@ -1,0 +1,7 @@
+{
+  "/v1/*": {
+    "target": "https://api.apix.limnu.com/",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

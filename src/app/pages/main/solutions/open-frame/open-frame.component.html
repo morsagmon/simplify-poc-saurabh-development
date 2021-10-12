@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Found Solutions</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid class="container h-100">
+        <ion-row class="ion-justify-content-center row h-100 ion-no-padding">
+            <ion-col size="12" id="content-text" class="ion-no-padding" style="height: 60%">
+                <iframe name="myFrame" class="webPage" id="myFrame" style="height: 100%; width: 100%"
+                        [src]="boardURL | safe: 'resourceUrl'"></iframe>
+            </ion-col>
+            <ion-col size="12" class="ion-no-padding"
+                     style="height: 40%; position:relative; overflow-y:auto; margin-top: 5px; z-index: 0" #content>
+                <ion-row *ngFor="let msg of messages">
+                    <ion-col size="9" *ngIf="currentUser.toLowerCase() != msg.user.toLowerCase()"
+                             class="message other-message">
+                        <b class="ion-text-capitalize" style="display: block">{{msg.user}}</b>
+                        <p class="ion-no-margin">{{msg.msg}}</p>
+                    </ion-col>
+                    <ion-col offset="3" size="9" *ngIf="currentUser.toLowerCase() == msg.user.toLowerCase()"
+                             class="message my-message">
+                        <b class="ion-text-capitalize" style="display: block">{{msg.user}}</b>
+                        <p class="ion-no-margin">{{msg.msg}}</p>
+                    </ion-col>
+                </ion-row>
+                <ion-row
+                        class="ion-justify-content-center ion-align-items-center ion-margin-vertical ion-padding-vertical"
+                        *ngIf="messages?.length < 1">
+                    No chatting
+                </ion-row>
+                <ion-row
+                        style="align-items: center; position: absolute; bottom:0; width:100%; left: 0;background: #f7f7f7; z-index: 12221;">
+                    <ion-col size="10">
+                        <textarea autosize maxRows="3" [(ngModel)]="newMsg" class="message-input"></textarea>
+                    </ion-col>
+                    <ion-col size="2">
+                        <ion-button expand="block" (click)="sendMessage()" fill="clear" color="primary"
+                                    class="msg-btn">
+                            <ion-icon name="send"></ion-icon>
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
