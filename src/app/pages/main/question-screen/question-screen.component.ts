@@ -85,11 +85,11 @@ export class QuestionScreenComponent implements OnInit, AfterViewInit {
                             break;
                         case 'alex':
                             item.image = 'assets/images/helper-2.svg';
-                            item.relation = 'Parents';
+                            item.relation = 'Parent';
                             break;
                         case 'heather':
                             item.image = 'assets/images/helper-3.svg';
-                            item.relation = 'My Teacher';
+                            item.relation = 'Teacher';
                             break;
                         case 'becky':
                             item.image = 'assets/images/helper-4.svg';
@@ -119,7 +119,7 @@ export class QuestionScreenComponent implements OnInit, AfterViewInit {
                             this.waitingMessage = 'Waiting for all your helpers to respond…';
                             this.isInvite = false;
                         } else {
-                            this.waitingMessage = 'Your helpers have responded! Please select your helper to continue.';
+                            this.waitingMessage = '';
                             this.isInvite = false;
                         }
                         return helper;

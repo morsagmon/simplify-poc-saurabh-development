@@ -29,11 +29,11 @@ export class HelpersComponent implements OnInit {
                             break;
                         case 'alex':
                             item.image = 'assets/images/helper-2.svg';
-                            item.relation = 'Parents';
+                            item.relation = 'Parent';
                             break;
                         case 'heather':
                             item.image = 'assets/images/helper-3.svg';
-                            item.relation = 'My Teacher';
+                            item.relation = 'Teacher';
                             break;
                         case 'becky':
                             item.image = 'assets/images/helper-4.svg';

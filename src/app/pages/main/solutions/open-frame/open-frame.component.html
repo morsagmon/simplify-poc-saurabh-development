@@ -14,7 +14,7 @@
                         [src]="boardURL | safe: 'resourceUrl'"></iframe>
             </ion-col>
             <ion-col size="12" class="ion-no-padding"
-                     style="height: 40%; position:relative; overflow-y:auto; margin-top: 5px; z-index: 0" #content>
+                     style="height: 30%; position:relative; overflow-y:auto; margin-top: 5px; z-index: 0" #content>
                 <ion-row *ngFor="let msg of messages">
                     <ion-col size="9" *ngIf="currentUser.toLowerCase() != msg.user.toLowerCase()"
                              class="message other-message">
@@ -30,8 +30,11 @@
                 <ion-row
                         class="ion-justify-content-center ion-align-items-center ion-margin-vertical ion-padding-vertical"
                         *ngIf="messages?.length < 1">
-                    No chatting
+                        <img src="assets/images/chat.png">
                 </ion-row>
+            </ion-col>
+            <ion-col size="12" class="ion-no-padding"
+                     style="height: 10%; position:fixed; margin-top: 1px; z-index: 1" #content>    
                 <ion-row
                         style="align-items: center; position: absolute; bottom:0; width:100%; left: 0;background: #f7f7f7; z-index: 12221;">
                     <ion-col size="10">
