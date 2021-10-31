@@ -62,8 +62,11 @@
                              class="ion-text-center ion-margin-vertical ion-padding-horizontal">
                         <ion-spinner *ngIf="isInvite && !waitingMessage"></ion-spinner>
                         <ion-text *ngIf="!isInvite && waitingMessage">{{waitingMessage}}</ion-text>
-                        <button ion-button *ngIf="!isInvite && !waitingMessage" (click)="inviteButton()"
+                        <button ion-button *ngIf="!isInvite && !waitingMessage && !isInvitedOnce" (click)="inviteButton()"
                                 class='view-solution-btn'>Invite
+                        </button>
+                        <button ion-button *ngIf="!isInvite && !waitingMessage && isInvitedOnce" (click)="inviteButton()"
+                                class='view-solution-btn'>Invite Again
                         </button>
                     </ion-col>
                 </ion-row>

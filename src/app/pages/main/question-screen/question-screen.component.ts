@@ -29,6 +29,7 @@ export class QuestionScreenComponent implements OnInit, AfterViewInit {
     problemId: string;
     imageUrl;
     waitingMessage = '';
+    isInvitedOnce = false;
 
     constructor(public helper: CSHelper,
                 public photoService: PhotoService,
@@ -116,7 +117,7 @@ export class QuestionScreenComponent implements OnInit, AfterViewInit {
                             helper.status = notification.responseCode;
                         }
                         if (this.helperList.filter(hf => hf.status).length < this.helperList.length) {
-                            this.waitingMessage = 'Waiting for all your helpers to respond…';
+                            this.waitingMessage = 'More responses are expected...';
                             this.isInvite = false;
                         } else {
                             this.waitingMessage = '';
@@ -338,6 +339,7 @@ export class QuestionScreenComponent implements OnInit, AfterViewInit {
 
     inviteButton() {
         this.isInvite = true;
+        this.isInvitedOnce = true;
         let userId = '';
         const rowLen = this.helperList.length;
         this.api.removeHelperInvitation().then(() => {
