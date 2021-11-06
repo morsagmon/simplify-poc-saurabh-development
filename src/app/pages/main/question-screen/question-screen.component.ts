@@ -143,6 +143,7 @@ export class QuestionScreenComponent implements OnInit, AfterViewInit {
     getImage(image) {
         this.image = image;
         // this.helper.loadingStart();
+        //data - payload sent to mathpix for rendering
         const data = {
             src: image,
             formats: ['text', 'data', 'html'],
@@ -151,18 +152,20 @@ export class QuestionScreenComponent implements OnInit, AfterViewInit {
                 include_latex: true
             }
         };
+        //Send to mathpix for rendering
         this.api.renderImage(data).subscribe((res) => {
             this.renderedImage = null;
             console.log(res.data, 'logg on 138 line number');
             if (res.data?.length > 0) {
                 this.isRendered = true;
-                this.getImageText = res.text;
+                this.getImageText = res.text; //returned rendered text from Mathpix
                 console.log(res.text, 'logg on 142 line number');
                 Storage.get({key: 'problems'}).then((re) => {
                     if (re.value) {
                         console.log('logg on 145  line number');
                         JSON.parse(re.value).map(r => {
                             if (res.text == r.value) {
+                                //Rendered problem matching known problem in problemsArr (key: 'problems')
                                 Storage.get({key: 'solutions'}).then(sol => {
                                     console.log('logg on 149  line number');
                                     if (sol.value) {

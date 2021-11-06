@@ -54,8 +54,8 @@ export class ApiService {
         this.httpOptions = {
             headers: new HttpHeaders({
                 'content-type': 'application/json',
-                app_id: 'info_skillblaster_com_6aa86b_408261',
-                app_key: '97af423783221352866e255b591cca66f814e83c0104850a0f5fdab7cb1a7a7e'
+                app_id: 'info_skillblaster_com_6aa86b_5901c6',
+                app_key: '692b6852aec5061f3abc19218c299588d690f20a73a010e3b41c1adc90794fec'
             }),
         };
         return this.httpOptions;
